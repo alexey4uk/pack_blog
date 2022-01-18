@@ -1,0 +1,25 @@
+{% extends "/layout.html" %}
+
+{% block content %}
+<div class="col-md-8">
+<form method="POST" action="">
+  <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Заголовок новости</label>
+  <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="Заголовок новости">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Категория</label>
+  <input type="text" name="description" class="form-control" id="exampleFormControlInput1" placeholder="Категория">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Текст новости</label>
+  <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Автор</label>
+  <input type="text" name="user" class="form-control" id="exampleFormControlInput1" placeholder="">
+</div>
+<button type="submit" class="btn btn-dark">Добавить</button>
+</form>
+</div>
+{% endblock %}

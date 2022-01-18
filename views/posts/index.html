@@ -1,0 +1,23 @@
+{% extends "/layout.html" %}
+
+{% block content %}
+<div class="col-md-8">
+  <h3 class="pb-4 mb-4 fst-italic border-bottom">
+    Список материалов
+  </h3>
+  {% for post in list %}
+  <article class="blog-post">
+    <h2 class="blog-post-title"><a href="/post/{{ post.id }}">{{ post.title }}</a></h2>
+    <p class="blog-post-meta">Автор: {{ post.user }}</a></p>
+
+    <p>{{ post.description }}</p>
+    <hr>
+    <p>{{ post.content }}</p>
+
+  </article>
+  {% endfor %}
+  <nav class="blog-pagination" aria-label="Pagination">
+    <a class="btn btn-outline-primary" href="#">Older</a>
+    <a class="btn btn-outline-secondary disabled">Newer</a>
+  </nav>
+{% endblock %}
